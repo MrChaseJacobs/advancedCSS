@@ -7,10 +7,47 @@
 }
 
 html {
-    //defines 1rem
-  font-size: 62.5%;
+  // This defines what 1rem is
+  font-size: 62.5%; // 1rem = 10px/16px = 62.5%
+
+  // @include respond(phone) {
+  //   font-size: 35%; // 1rem = 9px/16px = 56.25%
+  // }
+
+  // @include respond(tab-port) {
+  //   font-size: 48%; // 1rem = 9px/16px = 56.25%
+  // }
+
+  // @include respond(tab-land) {
+  //   font-size: 62.5%; // 1rem = 10px/16px = 62.5%
+  // }
+
+  // @include respond(big-desktop) {
+  //   font-size: 75%; // 1rem = 12px/16px = 75%
+  // }
+
+  @include respond(tab-land) {
+    font-size: 62.5%; // 1rem = 10px/16px = 62.5%
+  }
+
+  @include respond(tab-port) {
+    font-size: 48%; // 1rem = 9px/16px = 56.25%
+  }
+
+  @include respond(phone) {
+    font-size: 35%; // 1rem = 9px/16px = 56.25%
+  }
+
+  @include respond(big-desktop) {
+    font-size: 75%; // 1rem = 12px/16px = 75%
+  }
 }
 
 body {
   box-sizing: border-box;
+  padding: 3rem;
+
+  @include respond(tab-port) {
+    padding: 0;
+  }
 }

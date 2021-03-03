@@ -8,12 +8,14 @@
     url(../img/hero.jpg);
   background-size: cover;
   background-position: top;
-
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
-
-  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
   position: relative;
-  backface-visibility: hidden;
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+  clip-path: polygon(0 0, 100% 0, 100% 75vh, 0 100%);
+
+  @include respond(phone) {
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+  }
 
   &__logo-box {
     position: absolute;
@@ -25,13 +27,9 @@
     height: 3.5rem;
   }
 
-  /* .logo:hover {
-    animation: moveInButton 1s ease-out;
-  } */
-
   &__text-box {
     position: absolute;
-    top: 45%;
+    top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
